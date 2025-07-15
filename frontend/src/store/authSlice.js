@@ -14,7 +14,15 @@ export const login = createAsyncThunk(
   'auth/login',
   async ({ email, password }, { rejectWithValue }) => {
     try {
-      const response = await api.post('/auth/login', { email, password });
+      const formData = new FormData();
+      formData.append('username', email);
+      formData.append('password', password);
+      
+      const response = await api.post('/auth/login', formData, {
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+      });
       const { access_token, user } = response.data;
       
       localStorage.setItem('token', access_token);
