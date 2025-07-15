@@ -87,7 +87,7 @@ const Dashboard = () => {
       value: dashboardStats.leadConversionRate || '24%',
       change: '+5%',
       changeType: 'positive',
-      icon: TrendingUpIcon,
+      icon: ArrowTrendingUpIcon,
       color: 'bg-purple-500',
     },
   ];
