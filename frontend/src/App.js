@@ -13,6 +13,8 @@ import ScrumBoard from './pages/ScrumBoard';
 import EmailCenter from './pages/EmailCenter';
 import Analytics from './pages/Analytics';
 import Settings from './pages/Settings';
+import PaperlessOffice from './pages/PaperlessOffice';
+import APIIntegration from './pages/APIIntegration';
 import LoadingSpinner from './components/LoadingSpinner';
 
 function App() {
@@ -50,6 +52,8 @@ function App() {
             <Route path="email-center" element={<EmailCenter />} />
             <Route path="analytics" element={<Analytics />} />
             <Route path="settings" element={<Settings />} />
+            <Route path="paperless-office" element={<PaperlessOffice />} />
+            <Route path="api-integration" element={<APIIntegration />} />
             <Route path="*" element={<Navigate to="/" />} />
           </Route>
         )}
